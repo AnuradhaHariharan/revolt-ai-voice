@@ -102,7 +102,7 @@ export class GdmLiveAudio extends LitElement {
     transition: filter 0.3s ease;
     filter: invert(1) brightness(2);
     }
-
+    
     .main-content {
       display: flex;
       flex-direction: column;
@@ -116,7 +116,7 @@ export class GdmLiveAudio extends LitElement {
       justify-content: center;
       gap: 20px;
     }
-
+    
     .robot-icon {
       width: 80px;
       height: 80px;
@@ -360,7 +360,6 @@ export class GdmLiveAudio extends LitElement {
     return html`
       <div class="container">
         <img class ="logo" src="/revolt.png">
-
         <div class="main-content">
           <div class="title-container">
            <img src="https://live.revoltmotors.com/images/Rev.gif">
