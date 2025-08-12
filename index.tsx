@@ -94,9 +94,13 @@ export class GdmLiveAudio extends LitElement {
     }
 
     .logo {
-      position: absolute;
-      top: 40px;
-      left: 40px;
+     position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 50px;
+    height: auto;
+    transition: filter 0.3s ease;
+    filter: invert(1) brightness(2);
     }
 
     .main-content {
@@ -137,10 +141,15 @@ export class GdmLiveAudio extends LitElement {
     }
 
     h1 {
-      font-size: 3.5rem;
-      font-weight: 600;
       margin: 0;
-      color: #e0e0e0;
+      color: #e9ecef;
+      font-size: 2.5rem;
+      font-weight: 600;
+      transition: color 0.3s;
+      ext-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .mic-button {
@@ -350,80 +359,12 @@ export class GdmLiveAudio extends LitElement {
 
     return html`
       <div class="container">
-        <div class="logo">
-          <svg
-            width="95"
-            height="15"
-            viewBox="0 0 95 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M4.633 13.5835V1.16683H10.953C13.753 1.16683 15.601 2.5735 15.601 4.8395C15.601 6.1055 14.793 7.0455 13.473 7.6335L16.681 13.5835H14.329L11.289 7.9975H6.873V13.5835H4.633ZM6.873 3.01483H10.777C12.401 3.01483 13.361 3.7975 13.361 4.8395C13.361 5.8815 12.401 6.66417 10.777 6.66417H6.873V3.01483Z"
-              fill="white" />
-            <path
-              d="M18.7553 1.16683H23.8353V2.9895H21.0953V6.51283H23.4993V8.3355H21.0953V12.2415H23.8353V14.0642H18.7553V1.16683Z"
-              fill="white" />
-            <path
-              d="M26.0315 1.16683L29.4155 13.5835H31.7675L35.1515 1.16683H32.6875L30.5915 9.12783L28.4955 1.16683H26.0315Z"
-              fill="white" />
-            <path
-              d="M37.3229 7.6205C37.3229 4.0085 39.8709 1.4125 43.8189 1.4125C47.7489 1.4125 50.3149 4.0085 50.3149 7.6205C50.3149 11.2325 47.7669 13.8285 43.8189 13.8285C39.8709 13.8285 37.3229 11.2325 37.3229 7.6205ZM48.0749 7.6205C48.0749 5.1845 46.2829 3.2525 43.8189 3.2525C41.3549 3.2525 39.5629 5.1845 39.5629 7.6205C39.5629 10.0565 41.3549 11.9885 43.8189 11.9885C46.2829 11.9885 48.0749 10.0565 48.0749 7.6205Z"
-              fill="white" />
-            <path
-              d="M52.6366 1.16683H54.8766V11.7355H60.0286V13.5835H52.6366V1.16683Z"
-              fill="white" />
-            <path
-              d="M62.3919 1.16683H69.4839V3.01483H64.6319V13.5835H62.3919V1.16683Z"
-              fill="white" />
-          </svg>
-        </div>
+        <img class ="logo" src="/revolt.png">
 
         <div class="main-content">
           <div class="title-container">
-            <svg
-              class="robot-icon ${classMap(robotClasses)}"
-              viewBox="0 0 100 100"
-              xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient
-                  id="robotGradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%">
-                  <stop
-                    offset="0%"
-                    style="stop-color:#23D160;stop-opacity:1" />
-                  <stop
-                    offset="100%"
-                    style="stop-color:#00F5D4;stop-opacity:1" />
-                </linearGradient>
-              </defs>
-              <circle
-                cx="50"
-                cy="85"
-                r="14"
-                stroke="url(#robotGradient)"
-                stroke-width="3"
-                fill="none" />
-              <path
-                d="M50 71 V 99"
-                stroke="url(#robotGradient)"
-                stroke-width="2" />
-              <path d="M50 65 V 71" stroke="#23D160" stroke-width="3" />
-              <rect
-                x="35"
-                y="35"
-                width="30"
-                height="30"
-                rx="15"
-                fill="#121212"
-                stroke="url(#robotGradient)"
-                stroke-width="2" />
-              <rect x="42" y="45" width="5" height="8" fill="#FFF" />
-              <rect x="53" y="45" width="5" height="8" fill="#FFF" />
-            </svg>
-            <h1>Talk to Revolt</h1>
+           <img src="https://live.revoltmotors.com/images/Rev.gif">
+            <h1>Talk to Rev</h1>
           </div>
 
           <button
